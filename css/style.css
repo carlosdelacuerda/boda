@@ -1,0 +1,60 @@
+/* generic styles */
+body {
+    font-family: 'Sacramento', cursive;
+    margin: 0;
+    font-size: 32px;
+    color: #4a6670;
+    padding-bottom: 80px;
+}
+h1, h2, h3 {
+    font-family: 'Great Vibes', cursive;
+    color: rgb(191, 170, 170);
+}
+h1 {
+    font-size: 64px;
+    padding: 32px;
+    padding-bottom: 0;
+}
+h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+li {
+    list-style: none;
+}
+/* cover */
+.content-cover {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.cover {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.thumbnail {
+    width: 100%;
+}
+
+/* confirmation */
+.confirmation {
+    z-index: 2;
+    margin-top: 48px;
+}
+.invitados li {
+    width: 32%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 32px;
+    background-image: url('../img/no-checked.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position-y: center;
+    background-position-x: left;
+    cursor: pointer;
+    margin-top: 32px;
+}
+.invitados li.confirmado {
+    background-image: url('../img/checked.svg');
+}
