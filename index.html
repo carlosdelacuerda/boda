@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +19,12 @@
     <title>Boda Fer y Viky</title>
 </head>
 <body>
+    <div  class="left-animation animation">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ht0ubbi5.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+    </div>
+    <div class="right-animation animation">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_ht0ubbi5.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+    </div>
     <div class="container">
         <header class="">
             <h1 class="col-12 text-center">Fer y Viky</h1>
@@ -51,6 +64,7 @@
             </div>
             <h3 class="col-12 text-center fecha-boda">1 de junio de 2022</h3>
         </header>
+        <div class="separator" id="confirmation"></div>
         <div class="confirmation col-12">
             <h2 class="col-12 text-center">Confirmad vuestra asistencia</h2>
             <ul class="invitados">
@@ -60,11 +74,12 @@
                 <li class="confirmado">Chiquito de la Calzada</li>
                 <li>Pepi Luci Bom</li>
             </ul>
-            <button class="add-person">Añadir invitado/a</button>
+            <button class="add-person">Añadir invitado /a</button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="./js/simpleParallax.min.js"></script>
     <script src="./js/js.js"></script>
 </body>
