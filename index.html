@@ -7,7 +7,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -74,7 +73,60 @@
                 <li class="confirmado">Chiquito de la Calzada</li>
                 <li>Pepi Luci Bom</li>
             </ul>
-            <button class="add-person">Añadir invitado /a</button>
+            <p class="col-12 text-center expl-edit">
+                Si quieres añadir más personas a tu lista, editar los nombres o borrar, pulsa en el botón
+            </p>
+            <button class="add-person" onclick="openModal()" data-toggle="modal" data-target="#exampleModal">Editar lista de invitados /as</button>
+
+            <div id="modal" class="modal" >
+              <div class="my-modal-dialog">
+                <ul class="table-edit-assistants">
+                  <li class="col-12 head-assistants">
+                    <span>
+                      Nombre
+                    </span>
+                    <span class="text-center">
+                      Asiste
+                    </span>
+                    <span class="text-center">
+                      Eliminar
+                    </span>
+                  </li>
+                  
+                  <li class="col-12">
+                    <span>
+                      <input class="edit-name" type="text" value="Pepito el de los palotes">
+                    </span>
+                    <span class="align-center cursor-pointer">
+                      Si
+                    </span>
+                    <span class="align-center text-center">  
+                      <img class="remove-friend" src="./img/remove-friend.png" tooltip="Borrar a esta persona de la lista de invitados/as">
+                    </span>
+                  </li>
+                  <li class="col-12">
+                    <span class="align-center">
+                      <input class="edit-name" type="text" value="Juanito Valderrama">
+                    </span>
+                    <span class="align-center text-center cursor-pointer">
+                      Si
+                    </span>
+                    <span class="align-center text-center">
+                      <img class="remove-friend" src="./img/remove-friend.png" tooltip="Borrar a esta persona de la lista de invitados/as">
+                    </span>
+                  </li>
+                  <button>Añadir invitado</button>
+                </ul>
+                <div class="save-assistants">
+                  <div class="content-save-assistants">
+                    <a onclick="closeModal()" style="text-decoration: underline; cursor: pointer">Cancelar</a>
+                    <button onclick="closeModal()">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -22,16 +22,23 @@ h3 {
 li {
     list-style: none;
 }
-/* animation */
-#bm {
-    height: 500px;
-    width: 500px;
+a {
+    transition: color 0.3s ease-in-out;
+}
+a:hover {
+    transition: color 0.3s ease-in-out;
+}
+input[type=text] {
+    border: 0 solid transparent;
+    border-bottom: 1px solid #4a6670;
+    color: #4a6670;
 }
 /* heart animation */
 .animation {
     position: fixed;
     z-index: -1;
     top: 200px;
+    opacity: 0.3;
 }
 .right-animation {
     right: 0;
@@ -99,22 +106,119 @@ li {
     background-position-x: left;
     cursor: pointer;
     margin-top: 32px;
+    transition: color 0.3s ease-in-out;
 }
 .invitados li:hover {
     color: rgb(191, 170, 170);
+    transition: color 0.3s ease-in-out;
 }
 .invitados li.confirmado {
     background-image: url('../img/checked.svg');
 }
-.add-person {
+.expl-edit {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+/* modal */
+.modal {
+    display: none;
+    background-color: rgba(255,255,255,.3);
+    backdrop-filter: blur(6px);
+}
+.my-modal-dialog {
+    background-color: white;
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 14px 7px rgb(241 229 229);
+    height: 100%;
+    padding: 32px;
+    overflow: auto;
+}
+.table-edit-assistants{
+    padding-bottom: 72px;
+}
+.table-edit-assistants li {
+    display: inline-flex;
+}
+.table-edit-assistants li span:first-child {
+    width: 70%;
+}
+.table-edit-assistants li span:first-child + span {
+    width: 15%;
+}
+.table-edit-assistants li span:first-child + span + span {
+    width: 15%;
+}
+.save-assistants {
+    display: flex;
+    width: 100%;
+    background-color: rgba(255,255,255,.3);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgb(241, 229, 229);
+    left: 0;
+    right: 0;
+}
+.save-assistants .content-save-assistants{
+    width: 400px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
     width: auto;
-    padding: 8px 32px;
+    padding: 12px 32px 8px 32px;
     text-align: center;
-    margin: 32px auto;
+    margin: 0 auto;
     border: 1px solid #4a6670;
     color: #4a6670;
     background-color: rgb(241, 229, 229);
     display: flex;
     border-radius: 16px;
     cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+button:hover {
+    color: rgb(241, 229, 229);
+    background-color: #4a6670;
+    transition: background-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.save-assistants {
+    position: fixed;
+    bottom: 0;
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+.table-edit-assistants li {
+    padding: 16px 0;
+}
+.table-edit-assistants li.head-assistants {
+    border-bottom: 1px solid rgb(173, 159, 159);
+    color: rgb(173, 159, 159);
+}
+input.edit-name {
+    padding-left: 56px;
+    background-image: url('../img/pencil.png');
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: contain;
+    width: 100%;
+}
+.remove-friend {
+    height: 40px;
+    cursor: pointer;
+}
+.align-center {
+    display: flex;
+    justify-content: center;
 }
