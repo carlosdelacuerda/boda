@@ -6,9 +6,11 @@ body {
     color: #4a6670;
     padding-bottom: 80px;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Great Vibes', cursive;
     color: rgb(191, 170, 170);
+    margin-top: 32px;
+    margin-bottom: 0;
 }
 h1 {
     font-size: 64px;
@@ -88,6 +90,7 @@ input[type=text] {
     background-image: url('../img/separator.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    margin-top: 40px;
 }
 /* confirmation */
 .confirmation {
@@ -221,4 +224,28 @@ input.edit-name {
 .align-center {
     display: flex;
     justify-content: center;
+}
+
+/* food */
+.what-eat input, .what-eat span {
+    display: inline-flex;
+}
+.what-eat li {
+    width: 32%;
+}
+.what-eat li:last-child {
+    width: 100%;
+}
+.person-food {
+    border-top: 1px solid #4a6670;
+    margin-top: 32px;
+    padding-top: 24px;
+}
+.title-name-food {
+    background-color: rgba(173, 159, 159, .3);
+    border-radius: 8px;
+    padding: 8px;
+}
+.food button {
+    margin-top: 40px;
 }
