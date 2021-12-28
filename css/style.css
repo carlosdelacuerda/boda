@@ -249,3 +249,18 @@ input.edit-name {
 .food button {
     margin-top: 40px;
 }
+/* gallery */
+#gallery {
+    padding: 0;
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+#gallery li {
+    display: flex;
+    height: 100%;
+}
+#gallery li img {
+    display: flex;
+    height: 100%;
+}
