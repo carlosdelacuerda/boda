@@ -125,7 +125,7 @@ input[type=text] {
 
 /* modal */
 .modal {
-    display: none;
+    display: block;
     background-color: rgba(255,255,255,.3);
     backdrop-filter: blur(6px);
 }
@@ -138,8 +138,9 @@ input[type=text] {
     height: 100%;
     padding: 32px;
     overflow: auto;
+    padding-bottom: 160px;
 }
-.table-edit-assistants{
+.table-edit-assistants {
     padding-bottom: 72px;
 }
 .table-edit-assistants li {
@@ -216,6 +217,7 @@ input.edit-name {
     background-position-y: center;
     background-size: contain;
     width: 100%;
+    margin-left: 16px;
 }
 .remove-friend {
     height: 40px;
@@ -225,22 +227,79 @@ input.edit-name {
     display: flex;
     justify-content: center;
 }
+span.checkbox {
+    height: 48px;
+    background-repeat: no-repeat;
+    padding-right: 16px;
 
-/* food */
-.what-eat input, .what-eat span {
+}
+.active span.checkbox {
+    background-image: url('../img/checked.svg');
+}
+.inactive span.checkbox {
+    background-image: url('../img/no-checked.svg');
+}
+.selection-food {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+.selection-food span {
+    width: 20%;
+    cursor: pointer;
+}
+.selection-food span:last-child {
     display: inline-flex;
+    width: 35%;
 }
-.what-eat li {
-    width: 32%;
+.selection-food span.tachado {
+    text-decoration: line-through;
+    opacity: 0.4;
 }
-.what-eat li:last-child {
+.title-modal {
+    margin-bottom: 32px;
+}
+.over-layer {
+    position: absolute;
+    height: 100%;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    z-index: 1;
 }
-.person-food {
-    border-top: 1px solid #4a6670;
+.active .over-layer {
+    display: none;
+}
+.invitado {
+    margin-bottom: 48px;
+}
+.modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    justify-content: space-between;
+    height: auto;
+    bottom: 0;
+    padding: 16px;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 900px;
+}
+.modal-buttons a, .modal-buttons button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.button-add-guest {
+    position: relative;
+    float: right;
     margin-top: 32px;
-    padding-top: 24px;
 }
+ /* food */
+
 .title-name-food {
     background-color: rgba(173, 159, 159, .3);
     border-radius: 8px;

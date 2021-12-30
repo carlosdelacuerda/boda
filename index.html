@@ -73,56 +73,65 @@
                 <li>Pepi Luci Bom</li>
             </ul>
             <p class="col-12 text-center expl-edit">
-                Si quieres añadir más personas a tu lista, editar los nombres o borrar, pulsa en el botón
+                Edita tu lista de invitadxs para que sepamos quienes vienen. También podrás indicar las particularidades en la comida como "Gluten free", "Infantil" o "Sin carne"
             </p>
             <button class="add-person" onclick="openModal()" data-toggle="modal" data-target="#exampleModal">Editar lista de invitados /as</button>
 
-            <div id="modal" class="modal" >
-              <div class="my-modal-dialog">
-                <ul class="table-edit-assistants">
-                  <li class="col-12 head-assistants">
-                    <span>
-                      Nombre
+            <div id="modal" class="modal col-12 row" >
+              <div class="my-modal-dialog col-12">
+                <h4 class="col-12 title-modal text-center">Desde aquí podras indicar que invitadxs vienen, añadir más e indicar las particularidades en la comida</h4>
+                <div class="invitado col-12 active">
+                  <div class="over-layer"></div>
+                   <span class="checkbox col-2"></span>
+                   <span>
+                     <input class="edit-name col-10" type="text" value="Pepito el de los palotes">
+                   </span>
+                   <div class="col-12 selection-food">
+                     <span class="tachado">
+                       Infantil
+                     </span>
+                     <span class="tachado">
+                      Sin Gluten
                     </span>
-                    <span class="text-center">
-                      Asiste
+                    <span class="tachado">
+                      Sin carne
                     </span>
-                    <span class="text-center">
-                      Eliminar
+                    <span class="tachado">
+                        Otros: 
+                        <input type="text">
                     </span>
-                  </li>
-                  
-                  <li class="col-12">
-                    <span>
-                      <input class="edit-name" type="text" value="Pepito el de los palotes">
-                    </span>
-                    <span class="align-center cursor-pointer">
-                      Si
-                    </span>
-                    <span class="align-center text-center">  
-                      <img class="remove-friend" src="./img/remove-friend.png" tooltip="Borrar a esta persona de la lista de invitados/as">
-                    </span>
-                  </li>
-                  <li class="col-12">
-                    <span class="align-center">
-                      <input class="edit-name" type="text" value="Juanito Valderrama">
-                    </span>
-                    <span class="align-center text-center cursor-pointer">
-                      Si
-                    </span>
-                    <span class="align-center text-center">
-                      <img class="remove-friend" src="./img/remove-friend.png" tooltip="Borrar a esta persona de la lista de invitados/as">
-                    </span>
-                  </li>
-                  <button>Añadir invitado /a</button>
-                </ul>
-                <div class="save-assistants">
-                  <div class="content-save-assistants">
-                    <a onclick="closeModal()" style="text-decoration: underline; cursor: pointer">Cancelar</a>
-                    <button onclick="closeModal()">Guardar</button>
-                  </div>
+                   </div>
                 </div>
-              </div>
+                <div class="invitado col-12 inactive">
+                  <div class="over-layer"></div>
+                   <span class="checkbox col-2"></span>
+                   <span>
+                     <input class="edit-name col-10" type="text" value="Pepito el de los palotes">
+                   </span>
+                   <div class="col-12 selection-food">
+                     <span class="tachado">
+                       Infantil
+                     </span>
+                     <span class="tachado">
+                      Sin Gluten
+                    </span>
+                    <span class="tachado">
+                      Sin carne
+                    </span>
+                    <span class="tachado">
+                        Otros: 
+                        <input type="text">
+                    </span>
+                   </div>
+                   <button class="button-add-guest">
+                     Añadir invitadx
+                   </button>
+                </div>
+                <div class="modal-buttons col-12">
+                  <a>Cancelar</a>
+                  <button>Guardar</button>
+                </div>
+                </div>
             </div>
         </div>
         <div class="separator" id="food"></div>
@@ -134,26 +143,7 @@
           <p class="col-12 text-center">Crujientes Mc Nuggets con salsa BBQ</p>
           <h4 class="col-12 text-center">Postre</h4>
           <p class="col-12 text-center">A elegir entre Pantera Rosa o Bollicao</p>
-          <h4 class="aliments-ask col-12 text-center">¿Hay algo que debamos saber para los menús de tu grupo (infantil, sin gluten...)?</h4>
-          <div class="person-food col-12">
-            <span class="title-name-food col-12 text-center">Pepito el de los palotes</span>
-            <ul class="invitados what-eat">
-              <li>Sin Gluten</li>
-              <li class="confirmado">Sin Carne</li>
-              <li>Menú Infantil</li>
-              <li class="confirmado"><span>Otros: </span><input type="text" /></li>
-            </ul>
-          </div>
-          <div class="person-food col-12">
-            <span class="title-name-food col-12 text-center">Manolito Gafotas</span>
-            <ul class="invitados what-eat">
-              <li>Sin Gluten</li>
-              <li class="confirmado">Sin Carne</li>
-              <li>Menú Infantil</li>
-              <li class="confirmado"><span>Otros: </span><input type="text" /></li>
-            </ul>
-          </div>
-         <button>Guardar preferencias de comida</button>
+
         </div>
         <div class="separator" id="picures"></div>
         <div class="picures col-12">
